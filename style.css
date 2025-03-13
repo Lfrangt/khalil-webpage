@@ -24,6 +24,12 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* 添加导航栏隐藏时的样式 */
+nav.nav-hidden {
+    transform: translateY(-100%);
 }
 
 .nav-container {

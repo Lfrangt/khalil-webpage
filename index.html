@@ -98,5 +98,32 @@
     <footer>
         <p>&copy; 2024 Khalil</p>
     </footer>
+
+    <script>
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateNav() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > lastScrollY) {
+                // 向下滚动，隐藏导航栏
+                nav.classList.add('nav-hidden');
+            } else {
+                // 向上滚动，显示导航栏
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateNav();
+                });
+                ticking = true;
+            }
+        });
+    </script>
 </body>
 </html> 
