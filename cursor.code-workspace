@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "cursor",
+			"path": "."
+		},
+		{
+			"name": "image",
+			"path": "../Downloads/image"
+		}
+	],
+	"settings": {}
+}
