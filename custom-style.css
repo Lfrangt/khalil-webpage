@@ -899,3 +899,541 @@ nav ul li a:hover::after {
     line-height: 1.6;
     margin: 0;
 }
+
+/* 投资页面样式 */
+.investing-banner {
+    background: var(--gradient-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border-left: 5px solid var(--accent);
+}
+
+.investing-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 20% 30%, rgba(190, 168, 167, 0.1) 0%, transparent 40%),
+                    radial-gradient(circle at 80% 70%, rgba(54, 56, 76, 0.1) 0%, transparent 40%);
+    z-index: 0;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.principle-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-left: 3px solid var(--accent);
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.principle-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(190, 168, 167, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.principle-icon i {
+    font-size: 1.8rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover .principle-icon {
+    transform: scale(1.1);
+    background: rgba(190, 168, 167, 0.2);
+}
+
+.principle-card:hover .principle-icon i {
+    color: var(--accent);
+}
+
+.principle-card h4 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.principle-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.principle-card:hover h4::after {
+    width: 100%;
+}
+
+.principle-card p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.principle-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.principle-points li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.principle-points li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.principle-card:hover .principle-points li {
+    transform: translateX(5px);
+    color: var(--text);
+}
+
+/* 投资方法论样式 */
+.approach-steps {
+    margin-top: 2rem;
+}
+
+.approach-step {
+    display: flex;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.step-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.7;
+    margin-right: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h5 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin: 0 0 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.step-content p {
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.approach-step:hover .step-number {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.approach-step:hover .step-content h5 {
+    color: var(--accent);
+}
+
+/* 投资书籍样式 */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-left: 3px solid var(--accent);
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.book-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(190, 168, 167, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.book-icon i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.book-card:hover .book-icon {
+    transform: scale(1.1);
+    background: rgba(190, 168, 167, 0.2);
+}
+
+.book-card:hover .book-icon i {
+    color: var(--accent);
+}
+
+.book-card h4 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-author {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.book-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 引用样式 */
+.quote {
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.quote i {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: var(--accent);
+    opacity: 0.5;
+}
+
+.quote p {
+    font-style: italic;
+    color: var(--primary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 0 0.5rem 0;
+}
+
+.quote-author {
+    font-weight: 500;
+    color: var(--secondary);
+    text-align: right;
+    display: block;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .principles-grid, .books-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .approach-step {
+        flex-direction: column;
+    }
+    
+    .step-number {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* 投资卡片样式 */
+.investment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.investment-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-left: 3px solid var(--accent);
+}
+
+.investment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.investment-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(190, 168, 167, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.investment-icon i {
+    font-size: 1.8rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.investment-card:hover .investment-icon {
+    transform: scale(1.1);
+    background: rgba(190, 168, 167, 0.2);
+}
+
+.investment-card:hover .investment-icon i {
+    color: var(--accent);
+}
+
+.investment-card h4 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.investment-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.investment-card:hover h4::after {
+    width: 100%;
+}
+
+.investment-card p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* 股票和加密货币项目样式 */
+.stock-list, .crypto-list {
+    margin-top: 1.5rem;
+}
+
+.stock-item, .crypto-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background: var(--light);
+}
+
+.stock-item:hover, .crypto-item:hover {
+    transform: translateX(5px);
+    background: rgba(190, 168, 167, 0.05);
+}
+
+.stock-logo, .crypto-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(54, 56, 76, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.stock-logo i, .crypto-logo i {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.stock-info, .crypto-info {
+    flex: 1;
+}
+
+.stock-info h5, .crypto-info h5 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin: 0 0 0.3rem 0;
+}
+
+.stock-info p, .crypto-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Web3 愿景部分样式 */
+.web3-vision .web3-content > p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    .investment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stock-item, .crypto-item {
+        flex-direction: column;
+    }
+    
+    .stock-logo, .crypto-logo {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 投资组合饼图样式 */
+.portfolio-distribution {
+    margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.chart-center-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.chart-center-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.chart-center-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.legend-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.legend-label {
+    flex: 1;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.legend-value {
+    font-weight: 700;
+    color: var(--secondary);
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-distribution {
+        flex-direction: column;
+    }
+}
