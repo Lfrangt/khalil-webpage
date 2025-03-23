@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khalil - 音乐世界</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- SEO 优化 -->
@@ -19,81 +20,94 @@
                 <li><a href="index.html">主页</a></li>
                 <li><a href="music.html">音乐</a></li>
                 <li><a href="movies.html">电影</a></li>
-                <li><a href="programming.html">编程</a></li>
+                <li><a href="programming.html">计算机</a></li>
+                <li><a href="investing.html">投资</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="content-section">
         <div class="container">
-            <h2>🎸 我的音乐世界</h2>
+            <h2 class="fade-in">🎸 我的音乐世界</h2>
             <div class="music-content">
-                <div class="music-intro">
+                <div class="music-intro fade-in">
                     <h3>音乐风格</h3>
-                    <p>主要专注于 R&B 和 Neo Soul 风格，同时也喜欢探索其他音乐类型。</p>
+                    <p>主要专注于 R&B、Neo Soul 和 Funk 风格，同时也喜欢探索其他音乐类型。</p>
                 </div>
                 
-                <div class="instruments">
-                    <h3>乐器演奏</h3>
-                    <div class="instrument-card">
-                        <h4>电吉他</h4>
-                        <p>演奏经验：3年</p>
-                        <p>最爱的吉他手：John Mayer, Tom Misch</p>
-                    </div>
-                    <div class="instrument-card">
-                        <h4>钢琴</h4>
-                        <p>演奏经验：5年</p>
-                        <p>最爱的钢琴手：Robert Glasper, Herbie Hancock</p>
-                    </div>
-                </div>
-
                 <div class="favorite-artists">
-                    <h3>最爱的音乐人</h3>
+                    <h3 class="fade-in">最爱的音乐人</h3>
                     <div class="artists-grid">
-                        <div class="artist-card">
+                        <div class="artist-card fade-in expandable">
                             <div class="artist-image">
-                                <!-- 将占位符替换为实际图片 -->
                                 <img src="./images/fang.jpeg" alt="方大同" class="artist-photo">
                             </div>
-                            <h4>方大同</h4>
-                            <p>华语R&B代表人物</p>
-                        </div>
-                        <div class="artist-card">
-                            <div class="artist-image">
-                                <!-- 这里可以放张悬的图片 -->
-                                <div class="image-placeholder">张悬照片</div>
+                            <div class="artist-info">
+                                <h4>方大同</h4>
+                                <p>华语R&B代表人物</p>
+                                <p class="artist-bio">集创作、制作、演唱于一身的华语音乐人，以浓厚的R&B风格和独特的嗓音著称。作品《爱爱爱》、《复刻回忆》等深受大众喜爱。</p>
+                                <button class="read-more" aria-label="展开查看更多"><i class="fas fa-ellipsis-h"></i></button>
                             </div>
-                            <h4>张悬</h4>
-                            <p>独立音乐人</p>
                         </div>
-                        <div class="artist-card">
+                        <div class="artist-card fade-in expandable">
                             <div class="artist-image">
-                                <!-- 这里可以放孙燕姿的图片 -->
-                                <div class="image-placeholder">孙燕姿照片</div>
+                                <img src="./images/corywong.jpg" alt="Cory Wong" class="artist-photo" style="object-position: center 30%;">
                             </div>
-                            <h4>孙燕姿</h4>
-                            <p>华语流行乐天后</p>
+                            <div class="artist-info">
+                                <h4>Cory Wong</h4>
+                                <p>现代Funk吉他大师</p>
+                                <p class="artist-bio">美国吉他手，Vulfpeck乐队成员，以其独特的律动感和精准的节奏吉他演奏知名。他的演奏技巧和舞台魅力让现代Funk音乐焕发新生。</p>
+                                <button class="read-more" aria-label="展开查看更多"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
                         </div>
-                        <div class="artist-card">
+                        <div class="artist-card fade-in expandable">
                             <div class="artist-image">
-                                <!-- 这里可以放Stevie Wonder的图片 -->
-                                <div class="image-placeholder">Stevie Wonder照片</div>
+                                <img src="./images/IMG_9636.jpeg" alt="张悬" class="artist-photo">
                             </div>
-                            <h4>Stevie Wonder</h4>
-                            <p>灵魂乐传奇</p>
+                            <div class="artist-info">
+                                <h4>张悬</h4>
+                                <p>独立音乐人</p>
+                                <p class="artist-bio">台湾独立音乐代表人物，以深刻的歌词和独特的声线闻名。她的作品《宝贝》、《城市》等展现了对生活细腻的观察和思考，影响了无数独立音乐爱好者。</p>
+                                <button class="read-more" aria-label="展开查看更多"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
                         </div>
-                        <div class="artist-card">
+                        <div class="artist-card fade-in expandable">
                             <div class="artist-image">
-                                <!-- 这里可以放John Mayer的图片 -->
-                                <div class="image-placeholder">John Mayer照片</div>
+                                <img src="./images/IMG_9637.jpeg" alt="孙燕姿" class="artist-photo">
                             </div>
-                            <h4>John Mayer</h4>
-                            <p>蓝调摇滚吉他大师</p>
+                            <div class="artist-info">
+                                <h4>孙燕姿</h4>
+                                <p>华语流行乐天后</p>
+                                <p class="artist-bio">新加坡华语歌手，以清亮的嗓音和真诚的演绎闻名。《天黑黑》、《遇见》、《绿光》等经典作品陪伴了一代人成长，她独特的音乐风格影响深远。</p>
+                                <button class="read-more" aria-label="展开查看更多"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="artist-card fade-in expandable">
+                            <div class="artist-image">
+                                <img src="./images/IMG_9639.jpeg" alt="Stevie Wonder" class="artist-photo">
+                            </div>
+                            <div class="artist-info">
+                                <h4>Stevie Wonder</h4>
+                                <p>灵魂乐传奇</p>
+                                <p class="artist-bio">美国音乐巨匠，尽管从小失明，但音乐天赋惊人。他的作品融合灵魂乐、R&B和爵士，《Superstition》、《Isn't She Lovely》等歌曲影响了几代音乐人。</p>
+                                <button class="read-more" aria-label="展开查看更多"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                        <div class="artist-card fade-in expandable">
+                            <div class="artist-image">
+                                <img src="./images/IMG_9640.jpeg" alt="John Mayer" class="artist-photo">
+                            </div>
+                            <div class="artist-info">
+                                <h4>John Mayer</h4>
+                                <p>蓝调摇滚吉他大师</p>
+                                <p class="artist-bio">美国歌手、词曲作者和吉他演奏家，以精湛的吉他技巧和跨越流行、摇滚、蓝调的音乐风格著称。《Gravity》、《Slow Dancing in a Burning Room》等作品展现了他对音乐的独到见解。</p>
+                                <button class="read-more" aria-label="展开查看更多"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="music-projects">
+                <div class="music-projects fade-in">
                     <h3>音乐作品</h3>
                     <p>即将上线...</p>
                 </div>
@@ -104,5 +118,98 @@
     <footer>
         <p>&copy; 2024 Khalil</p>
     </footer>
+
+    <script>
+        /**
+         * 处理导航栏滚动隐藏逻辑
+         * @description 向下滚动时隐藏导航栏，向上滚动时显示导航栏
+         */
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateNav() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > lastScrollY) {
+                // 向下滚动，隐藏导航栏
+                nav.classList.add('nav-hidden');
+            } else {
+                // 向上滚动，显示导航栏
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateNav();
+                });
+                ticking = true;
+            }
+        });
+        
+        /**
+         * 处理滚动动画效果
+         * @description 元素进入视口时添加动画效果
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始设置所有fade-in元素为不可见
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // 滚动时检查元素是否在视口内
+            function checkFadeElements() {
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    if (rect.top < viewHeight - 100) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始检查
+            checkFadeElements();
+            
+            // 滚动时检查
+            window.addEventListener('scroll', () => {
+                checkFadeElements();
+            });
+            
+            /**
+             * 处理音乐人卡片的展开/收起功能
+             */
+            const artistCards = document.querySelectorAll('.artist-card.expandable');
+            artistCards.forEach(card => {
+                const readMoreBtn = card.querySelector('.read-more');
+                
+                readMoreBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // 阻止事件冒泡
+                    card.classList.toggle('expanded');
+                });
+                
+                // 点击卡片也可以展开/收起
+                card.addEventListener('click', function() {
+                    const isExpanded = card.classList.contains('expanded');
+                    
+                    // 先重置所有卡片
+                    artistCards.forEach(c => {
+                        c.classList.remove('expanded');
+                    });
+                    
+                    // 如果当前卡片未展开，则展开它
+                    if (!isExpanded) {
+                        card.classList.add('expanded');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

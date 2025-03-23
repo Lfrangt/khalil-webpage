@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khalil - 个人主页</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -41,21 +42,28 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="profile">
-                <img src="./khalil.jpg" alt="Khalil的照片" class="profile-image">
+                <img src="./khalil.jpg" alt="Khalil的照片" class="profile-image float-element">
                 <div class="profile-text">
-                    <h2>你好，我是 Khalil</h2>
-                    <p class="subtitle">计算机科学专业学生</p>
-                    <div class="social-links">
+                    <h2 class="fade-in">你好，我是 Khalil</h2>
+                    <p class="subtitle fade-in">计算机科学专业学生</p>
+                    <div class="social-links fade-in">
                         <a href="https://www.instagram.com/lfrangt" target="_blank" class="social-link">
                             <i class="fab fa-instagram"></i> @lfrangt
                         </a>
                         <a href="https://v.douyin.com/jipuqiqoge" target="_blank" class="social-link">
                             <i class="fab fa-tiktok"></i> 抖音号：jipuqiqoge
                         </a>
+                        <a href="https://twitter.com/wuhuaguor" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i> @wuhuaguor
+                        </a>
+                        <a href="#" class="social-link wechat-link">
+                            <i class="fab fa-weixin"></i> Khalil6669
+                            <div class="wechat-qr-tooltip">微信号：Khalil6669</div>
+                        </a>
                     </div>
-                    <div class="bio">
-                        <p>🎓 就读于兰加拉学院（Langara College）计算机科学专业</p>
-                        <p>🌏 来自中国</p>
+                    <div class="bio fade-in">
+                        <p>🎓 即将就读于兰加拉学院（Langara College）计算机科学专业</p>
+                        <p>🌏 来自中国温州</p>
                         <p>💡 热爱编程和创新科技</p>
                         <p>🎸 音乐爱好者，擅长电吉他和钢琴</p>
                     </div>
@@ -66,20 +74,30 @@
 
     <section id="skills" class="skills-section">
         <div class="container">
-            <h2>我的兴趣爱好</h2>
+            <h2 class="fade-in">我的兴趣爱好</h2>
             <div class="skills-grid">
-                <a href="music.html" class="skill-card">
+                <a href="music.html" class="skill-card fade-in">
                     <h3>🎸 音乐</h3>
                     <p>电吉他 & 钢琴</p>
-                    <p>R&B / Neo Soul</p>
+                    <p>R&B / Neo Soul / Funk</p>
+                    <p>爵士 & 蓝调布鲁斯</p>
                 </a>
-                <a href="movies.html" class="skill-card">
+                <a href="movies.html" class="skill-card fade-in">
                     <h3>🎬 电影</h3>
-                    <p>热爱观看电影</p>
+                    <p>法国新浪潮</p>
+                    <p>经典歌舞剧</p>
+                    <p>哲学浪漫爱情</p>
                 </a>
-                <a href="programming.html" class="skill-card">
-                    <h3>💻 编程</h3>
-                    <p>Web 开发</p>
+                <a href="programming.html" class="skill-card fade-in">
+                    <h3>💻 计算机</h3>
+                    <p>Web 开发 & 区块链</p>
+                    <p>AI Agent 探索</p>
+                </a>
+                <a href="investing.html" class="skill-card fade-in">
+                    <h3>📈 投资</h3>
+                    <p>价值投资</p>
+                    <p>长期持有</p>
+                    <p>坚持复利</p>
                 </a>
             </div>
         </div>
@@ -87,8 +105,8 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>联系方式</h2>
-            <div class="contact-info">
+            <h2 class="fade-in">联系方式</h2>
+            <div class="contact-info fade-in">
                 <p>📧 Email: lfrangt@google.com</p>
                 <p>📍 Location: Vancouver, Canada</p>
             </div>
@@ -123,6 +141,40 @@
                 });
                 ticking = true;
             }
+        });
+        
+        /**
+         * 处理滚动动画效果
+         * @description 元素进入视口时添加动画效果
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始设置所有fade-in元素为不可见
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // 滚动时检查元素是否在视口内
+            function checkFadeElements() {
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    if (rect.top < viewHeight - 100) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始检查
+            checkFadeElements();
+            
+            // 滚动时检查
+            window.addEventListener('scroll', () => {
+                checkFadeElements();
+            });
         });
     </script>
 </body>
