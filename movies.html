@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil - 电影爱好</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- SEO 优化 -->
+    <meta name="description" content="Khalil的电影爱好 - 浪漫爱情电影收藏">
+    <meta name="keywords" content="Khalil, 电影, 爱在黎明破晓前, 爱在三部曲, 爱乐之城, 我的天才女友">
+    
+    <style>
+        .movie-section {
+            padding: 60px 0;
+        }
+        
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .movie-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .movie-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+        }
+        
+        .movie-info {
+            padding: 20px;
+        }
+        
+        .movie-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .movie-year {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .movie-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .quote {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #e9c46a;
+            padding: 15px 20px;
+            margin: 50px 0;
+            font-style: italic;
+            line-height: 1.7;
+        }
+        
+        .personal-note {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1><a href="index.html">Khalil</a></h1>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="music.html">音乐</a></li>
+                <li><a href="movies.html">电影</a></li>
+                <li><a href="programming.html">计算机</a></li>
+                <li><a href="investing.html">投资</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="movie-section">
+        <div class="container">
+            <h2 class="fade-in">我的电影世界</h2>
+            <p class="subtitle fade-in">通过电影寻找生活的诗意与浪漫</p>
+            
+            <div class="personal-note fade-in">
+                <p>电影于我而言，不仅是欣赏艺术，更是体验人生。尤其喜欢那些关于爱情、灵魂连接的故事，它们总能让我思考生活的意义与浪漫的真谛。我相信，就像电影中那些偶然的相遇一样，我也在等待着与我的灵魂伴侣相遇的那一刻。</p>
+            </div>
+            
+            <h3 class="fade-in">最爱的电影系列</h3>
+            <div class="movie-grid">
+                <div class="movie-card fade-in">
+                    <img src="./images/before-sunrise.jpg" alt="爱在黎明破晓前" class="movie-image">
+                    <div class="movie-info">
+                        <h4 class="movie-title">爱在黎明破晓前</h4>
+                        <p class="movie-year">1995</p>
+                        <p class="movie-desc">Jesse和Celine在维也纳的一夜邂逅，他们漫步在城市街头，分享彼此的想法、梦想和对生活的感悟。这部电影展现了偶遇的美丽和瞬间连接的力量。</p>
+                    </div>
+                </div>
+                
+                <div class="movie-card fade-in">
+                    <img src="./images/before-sunset-hq.jpg" alt="爱在日落黄昏时" class="movie-image">
+                    <div class="movie-info">
+                        <h4 class="movie-title">爱在日落黄昏时</h4>
+                        <p class="movie-year">2004</p>
+                        <p class="movie-desc">九年后，Jesse已成为一名作家，为宣传自己的新书来到巴黎，在书店邂逅了Celine。他们在巴黎街头漫步，回忆过去，分享生活，思考如何弥补错过的九年时光。电影探讨了时间、后悔和第二次机会的主题。</p>
+                    </div>
+                </div>
+                
+                <div class="movie-card fade-in">
+                    <img src="./images/before-midnight.jpg" alt="爱在午夜降临前" class="movie-image">
+                    <div class="movie-info">
+                        <h4 class="movie-title">爱在午夜降临前</h4>
+                        <p class="movie-year">2013</p>
+                        <p class="movie-desc">二十年的故事，Jesse和Celine现已成为一对夫妻，面对关系中的挑战和变化。这部电影展现了爱情的复杂性和长期关系的真实。</p>
+                    </div>
+                </div>
+                
+                <div class="movie-card fade-in">
+                    <img src="./images/la-la-land.jpg" alt="爱乐之城" class="movie-image">
+                    <div class="movie-info">
+                        <h4 class="movie-title">爱乐之城</h4>
+                        <p class="movie-year">2016</p>
+                        <p class="movie-desc">一个爵士钢琴家和一个有抱负的女演员在洛杉矶相遇，他们相爱并互相支持彼此的梦想。这部电影探讨了爱情与梦想之间的平衡。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quote fade-in">
+                <p>"If you want real experiences, that's the price you pay."</p>
+                <p>— Jesse, 爱在黎明破晓前</p>
+            </div>
+            
+            <h3 class="fade-in">最爱的剧集</h3>
+            <div class="movie-grid">
+                <div class="movie-card fade-in">
+                    <img src="./images/my-brilliant-friend-hd.jpg" alt="我的天才女友" class="movie-image">
+                    <div class="movie-info">
+                        <h4 class="movie-title">我的天才女友</h4>
+                        <p class="movie-year">2018-现在</p>
+                        <p class="movie-desc">这部HBO出品的意大利剧集改编自Elena Ferrante的畅销小说《那不勒斯四部曲》，讲述了Elena和Lila两位女孩从童年到成年的友谊故事。在战后的那不勒斯贫民区，她们相互支持、竞争，共同面对生活的挑战和社会的变革。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Khalil</p>
+    </footer>
+
+    <script>
+        /**
+         * 处理导航栏滚动隐藏逻辑
+         * @description 向下滚动时隐藏导航栏，向上滚动时显示导航栏
+         */
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateNav() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > lastScrollY) {
+                // 向下滚动，隐藏导航栏
+                nav.classList.add('nav-hidden');
+            } else {
+                // 向上滚动，显示导航栏
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateNav();
+                });
+                ticking = true;
+            }
+        });
+
+        /**
+         * 处理滚动动画效果
+         * @description 元素进入视口时添加动画效果
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始设置所有fade-in元素为不可见
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // 滚动时检查元素是否在视口内
+            function checkFadeElements() {
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    if (rect.top < viewHeight - 100) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始检查
+            checkFadeElements();
+            
+            // 滚动时检查
+            window.addEventListener('scroll', () => {
+                checkFadeElements();
+            });
+        });
+    </script>
+</body>
+</html> 

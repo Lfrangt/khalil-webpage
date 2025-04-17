@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil - 个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- SEO 优化 -->
+    <meta name="description" content="Khalil的个人主页 - 兰加拉学院计算机科学专业学生，音乐爱好者">
+    <meta name="keywords" content="Khalil, 兰加拉学院, Langara College, 计算机科学, 音乐, 编程">
+    <meta name="author" content="Khalil">
+    
+    <!-- 社交媒体优化 -->
+    <meta property="og:title" content="Khalil - 个人主页">
+    <meta property="og:description" content="兰加拉学院计算机科学专业学生，音乐爱好者">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="你的网站URL">
+    <meta property="og:image" content="你的头像图片URL">
+    
+    <!-- iOS优化 -->
+    <link rel="apple-touch-icon" href="你的图标URL">
+    <meta name="apple-mobile-web-app-title" content="Khalil">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>Khalil</h1>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="profile">
+                <img src="./images/IMG_9597.JPG" alt="Khalil的照片" class="profile-image float-element">
+                <div class="profile-text">
+                    <h2 class="fade-in">你好，我是 Khalil</h2>
+                    <p class="subtitle fade-in">计算机科学专业学生</p>
+                    <div class="social-links fade-in">
+                        <a href="https://www.instagram.com/lfrangt" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i> @lfrangt
+                        </a>
+                        <a href="https://v.douyin.com/jipuqiqoge" target="_blank" class="social-link">
+                            <i class="fab fa-tiktok"></i> 抖音号：jipuqiqoge
+                        </a>
+                        <a href="https://twitter.com/wuhuaguor" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i> @wuhuaguor
+                        </a>
+                        <a href="#" class="social-link wechat-link">
+                            <i class="fab fa-weixin"></i> Khalil6669
+                            <div class="wechat-qr-tooltip">微信号：Khalil6669</div>
+                        </a>
+                    </div>
+                    <div class="bio fade-in">
+                        <p>🎓 即将就读于兰加拉学院（Langara College）计算机科学专业</p>
+                        <p>🌏 来自中国温州</p>
+                        <p>💡 热爱编程和创新科技</p>
+                        <p>🎸 音乐爱好者，擅长电吉他和钢琴</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="fade-in">我的兴趣爱好</h2>
+            <div class="skills-grid">
+                <a href="music.html" class="skill-card fade-in">
+                    <h3>🎸 音乐</h3>
+                    <p>电吉他 & 钢琴</p>
+                    <p>R&B / Neo Soul / Funk</p>
+                    <p>爵士 & 蓝调布鲁斯</p>
+                </a>
+                <a href="movies.html" class="skill-card fade-in">
+                    <h3>🎬 电影</h3>
+                    <p>法国新浪潮</p>
+                    <p>经典歌舞剧</p>
+                    <p>哲学浪漫爱情</p>
+                </a>
+                <a href="programming.html" class="skill-card fade-in">
+                    <h3>💻 计算机</h3>
+                    <p>Web 开发 & 区块链</p>
+                    <p>AI Agent 探索</p>
+                </a>
+                <a href="investing.html" class="skill-card fade-in">
+                    <h3>📈 投资</h3>
+                    <p>价值投资</p>
+                    <p>长期持有</p>
+                    <p>坚持复利</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="fade-in">联系方式</h2>
+            <div class="contact-info fade-in">
+                <p>📧 Email: lfrangt.com@gmail.com</p>
+                <p>📍 Location: Vancouver, Canada</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Khalil</p>
+    </footer>
+
+    <script>
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateNav() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > lastScrollY) {
+                // 向下滚动，隐藏导航栏
+                nav.classList.add('nav-hidden');
+            } else {
+                // 向上滚动，显示导航栏
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateNav();
+                });
+                ticking = true;
+            }
+        });
+        
+        /**
+         * 处理滚动动画效果
+         * @description 元素进入视口时添加动画效果
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始设置所有fade-in元素为不可见
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // 滚动时检查元素是否在视口内
+            function checkFadeElements() {
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    if (rect.top < viewHeight - 100) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始检查
+            checkFadeElements();
+            
+            // 滚动时检查
+            window.addEventListener('scroll', () => {
+                checkFadeElements();
+            });
+        });
+    </script>
+</body>
+</html> 

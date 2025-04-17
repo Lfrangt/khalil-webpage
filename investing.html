@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil - 投资世界</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="custom-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- SEO 优化 -->
+    <meta name="description" content="Khalil的投资理念 - 价值投资、长期持有与复利增长">
+    <meta name="keywords" content="Khalil, 投资, 价值投资, 长期持有, 复利, 股票市场, 投资策略">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1><a href="index.html">Khalil</a></h1>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="music.html">音乐</a></li>
+                <li><a href="movies.html">电影</a></li>
+                <li><a href="programming.html">计算机</a></li>
+                <li><a href="investing.html">投资</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="investing-header">
+                <div class="investing-banner">
+                    <div class="banner-content">
+                        <h2 class="fade-in">📈 我的投资哲学</h2>
+                        <p class="banner-subtitle">价值投资 · 长期持有 · 坚持复利</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="investing-content">
+                <div class="investing-intro fade-in">
+                    <h3>投资理念</h3>
+                    <p>我相信投资不是短期的投机，而是长远的规划。通过坚持价值投资原则，持有优质资产，并利用复利的力量，长期稳健地积累财富。巴菲特曾说："复利是世界第八大奇迹。理解它的人会赚到钱，不理解的人会付出代价。"</p>
+                    
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>投资最重要的品质不是智商，而是性格。你需要的是一种能够控制驱使人类陷入麻烦的冲动的气质。</p>
+                        <span class="quote-author">— 沃伦·巴菲特</span>
+                    </div>
+                </div>
+                
+                <div class="core-principles fade-in">
+                    <h3>投资三大支柱</h3>
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <div class="principle-icon">
+                                <i class="fas fa-search-dollar"></i>
+                            </div>
+                            <h4>价值投资</h4>
+                            <p>寻找内在价值被低估的优质企业，关注公司基本面而非短期市场波动。价值投资者着眼于企业的长期盈利能力、竞争优势和管理团队。</p>
+                            <ul class="principle-points">
+                                <li>优质企业，合理价格</li>
+                                <li>安全边际是首要考量</li>
+                                <li>追求长期稳定的回报</li>
+                            </ul>
+                        </div>
+                        <div class="principle-card">
+                            <div class="principle-icon">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>长期持有</h4>
+                            <p>伟大企业的价值在时间的长河中不断显现。通过长期持有优质资产，避免频繁交易带来的成本损失和心理负担，让时间成为你最强大的盟友。</p>
+                            <ul class="principle-points">
+                                <li>投资伟大企业，持有终身</li>
+                                <li>避免频繁交易和市场噪音</li>
+                                <li>耐心是最大的优势</li>
+                            </ul>
+                        </div>
+                        <div class="principle-card">
+                            <div class="principle-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>坚持复利</h4>
+                            <p>复利是投资中最强大的力量。通过持续不断地将收益再投资，长期下来能产生惊人的财富增长效应。复利需要时间和耐心，持之以恒是关键。</p>
+                            <ul class="principle-points">
+                                <li>收益再投资，实现指数增长</li>
+                                <li>时间是复利最好的朋友</li>
+                                <li>小收益累积，长期大成果</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="investment-categories fade-in">
+                    <h3>投资组合</h3>
+                    
+                    <div class="portfolio-distribution">
+                        <div class="chart-container">
+                            <canvas id="portfolioChart"></canvas>
+                            <div class="chart-center-info">
+                                <span class="chart-center-value">100%</span>
+                                <span class="chart-center-label">资产配置</span>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: rgba(255, 99, 132, 0.8);"></span>
+                                <span class="legend-label">比特币 (BTC)</span>
+                                <span class="legend-value">30%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: rgba(54, 162, 235, 0.8);"></span>
+                                <span class="legend-label">特斯拉 (TSLA)</span>
+                                <span class="legend-value">25%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: rgba(75, 192, 192, 0.8);"></span>
+                                <span class="legend-label">卡尔达诺 (ADA)</span>
+                                <span class="legend-value">20%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: rgba(153, 102, 255, 0.8);"></span>
+                                <span class="legend-label">英伟达 (NVDA)</span>
+                                <span class="legend-value">15%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: rgba(255, 159, 64, 0.8);"></span>
+                                <span class="legend-label">苹果 (AAPL)</span>
+                                <span class="legend-value">10%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="investment-grid">
+                        <div class="investment-card">
+                            <div class="investment-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>港美股投资</h4>
+                            <p>专注优质科技股，寻找具有长期竞争优势和增长潜力的优质企业。</p>
+                            <div class="stock-list">
+                                <div class="stock-item">
+                                    <div class="stock-logo">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="stock-info">
+                                        <h5>Tesla (TSLA)</h5>
+                                        <p>电动汽车和清洁能源的领导者，看好其创新能力和市场潜力</p>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-logo">
+                                        <i class="fas fa-microchip"></i>
+                                    </div>
+                                    <div class="stock-info">
+                                        <h5>NVIDIA (NVDA)</h5>
+                                        <p>AI芯片领域的领军企业，驱动人工智能革命的核心硬件提供商</p>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-logo">
+                                        <i class="fab fa-apple"></i>
+                                    </div>
+                                    <div class="stock-info">
+                                        <h5>Apple (AAPL)</h5>
+                                        <p>消费科技巨头，卓越的品牌价值和生态系统形成强大的经济护城河</p>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-logo">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="stock-info">
+                                        <h5>小米集团 (01810.HK)</h5>
+                                        <p>"手机+AIoT"战略布局未来智能生活</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="investment-card">
+                            <div class="investment-icon">
+                                <i class="fab fa-bitcoin"></i>
+                            </div>
+                            <h4>加密货币</h4>
+                            <p>看好数字资产的长期价值和区块链技术的变革潜力。</p>
+                            <div class="crypto-list">
+                                <div class="crypto-item">
+                                    <div class="crypto-logo">
+                                        <i class="fab fa-bitcoin"></i>
+                                    </div>
+                                    <div class="crypto-info">
+                                        <h5>比特币 (BTC)</h5>
+                                        <p>数字黄金，价值存储的领导者，长期持有，相信其稀缺性价值</p>
+                                    </div>
+                                </div>
+                                <div class="crypto-item">
+                                    <div class="crypto-logo">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <div class="crypto-info">
+                                        <h5>卡尔达诺 (ADA)</h5>
+                                        <p>第三代区块链平台，看好其学术研究背景和可持续发展战略</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="web3-vision fade-in">
+                    <h3>Web3 愿景</h3>
+                    <div class="web3-content">
+                        <p>我相信Web3将重塑互联网，创造一个更加去中心化、用户拥有数据的网络生态。区块链技术是这一变革的核心，它提供了一种新的信任机制和价值传递方式。</p>
+                        
+                        <div class="web3-grid">
+                            <div class="web3-card">
+                                <div class="web3-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h4>去中心化金融 (DeFi)</h4>
+                                <ul>
+                                    <li>无需中介的金融服务</li>
+                                    <li>开放、透明的协议</li>
+                                    <li>流动性挖矿与收益聚合</li>
+                                    <li>智能合约驱动的金融应用</li>
+                                </ul>
+                            </div>
+                            <div class="web3-card">
+                                <div class="web3-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <h4>去中心化自治组织 (DAOs)</h4>
+                                <ul>
+                                    <li>社区共同治理</li>
+                                    <li>透明的决策流程</li>
+                                    <li>代币化的权益分配</li>
+                                    <li>自动化执行的规则</li>
+                                </ul>
+                            </div>
+                            <div class="web3-card">
+                                <div class="web3-icon">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <h4>区块链基础设施</h4>
+                                <ul>
+                                    <li>第三代区块链研究</li>
+                                    <li>可扩展性解决方案</li>
+                                    <li>跨链互操作性技术</li>
+                                    <li>Layer 2扩容技术</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Khalil</p>
+    </footer>
+
+    <!-- Chart.js库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        /**
+         * 处理导航栏滚动隐藏逻辑
+         * @description 向下滚动时隐藏导航栏，向上滚动时显示导航栏
+         */
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateNav() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > lastScrollY) {
+                // 向下滚动，隐藏导航栏
+                nav.classList.add('nav-hidden');
+            } else {
+                // 向上滚动，显示导航栏
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateNav();
+                });
+                ticking = true;
+            }
+        });
+        
+        /**
+         * 处理滚动动画效果
+         * @description 元素进入视口时添加动画效果
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始设置所有fade-in元素为不可见
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // 滚动时检查元素是否在视口内
+            function checkFadeElements() {
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    if (rect.top < viewHeight - 100) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始检查
+            checkFadeElements();
+            
+            // 滚动时检查
+            window.addEventListener('scroll', () => {
+                checkFadeElements();
+            });
+
+            // 创建投资组合饼图
+            const portfolioCtx = document.getElementById('portfolioChart').getContext('2d');
+            
+            // 定义图表数据
+            const portfolioData = {
+                labels: ['比特币 (BTC)', '特斯拉 (TSLA)', '卡尔达诺 (ADA)', '英伟达 (NVDA)', '苹果 (AAPL)'],
+                datasets: [{
+                    data: [30, 25, 20, 15, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                        'rgba(255, 159, 64, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1,
+                    hoverOffset: 15
+                }]
+            };
+            
+            // 定义图表配置
+            const portfolioConfig = {
+                type: 'doughnut',
+                data: portfolioData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    animation: {
+                        animateRotate: true,
+                        animateScale: true,
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.label}: ${context.raw}%`;
+                                }
+                            },
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            titleColor: '#36384C',
+                            bodyColor: '#36384C',
+                            borderColor: '#BEA8A7',
+                            borderWidth: 1,
+                            padding: 12,
+                            boxPadding: 6,
+                            usePointStyle: true,
+                            titleFont: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            bodyFont: {
+                                size: 13
+                            }
+                        }
+                    }
+                }
+            };
+            
+            // 创建图表
+            const portfolioChart = new Chart(portfolioCtx, portfolioConfig);
+            
+            // 为图例项添加交互功能
+            const legendItems = document.querySelectorAll('.legend-item');
+            legendItems.forEach((item, index) => {
+                item.addEventListener('mouseenter', () => {
+                    // 突出显示相应的扇区
+                    const activeSegment = portfolioChart.getDatasetMeta(0).data[index];
+                    portfolioChart.setActiveElements([{
+                        datasetIndex: 0,
+                        index: index
+                    }]);
+                    portfolioChart.update();
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    // 重置突出显示
+                    portfolioChart.setActiveElements([]);
+                    portfolioChart.update();
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
