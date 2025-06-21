@@ -1437,3 +1437,315 @@ nav ul li a:hover::after {
         flex-direction: column;
     }
 }
+
+@media (max-width: 768px) {
+    .portfolio-distribution {
+        padding: 1rem;
+    }
+}
+
+/* Abundra Capital 项目样式 */
+.abundra-section {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid #FF6B35; /* Abundra品牌橙色 */
+}
+
+.abundra-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.abundra-section h3 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+.abundra-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #FF6B35;
+    border-radius: 2px;
+}
+
+.abundra-intro {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.abundra-intro p {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.abundra-link-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.abundra-main-link {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #FF6B35, #FF8C42);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.abundra-main-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.abundra-main-link:hover::before {
+    left: 100%;
+}
+
+.abundra-main-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.abundra-main-link i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.abundra-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.abundra-feature-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid #FF6B35;
+}
+
+.abundra-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FF6B35, #FF8C42, #FFB366);
+    transition: all 0.3s ease;
+}
+
+.abundra-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.abundra-feature-card:hover::before {
+    height: 5px;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 66, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    color: #FF6B35;
+    transition: all 0.3s ease;
+}
+
+.abundra-feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 140, 66, 0.2));
+}
+
+.abundra-feature-card:hover .feature-icon i {
+    color: #E55A2B;
+}
+
+.abundra-feature-card h4 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.abundra-feature-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #FF6B35;
+    transition: width 0.3s ease;
+}
+
+.abundra-feature-card:hover h4::after {
+    width: 100%;
+}
+
+.abundra-feature-card p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.abundra-feature-card ul {
+    margin: 0;
+    padding: 0;
+}
+
+.abundra-feature-card li {
+    color: var(--text);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.abundra-feature-card li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #FF6B35;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.abundra-feature-card:hover li {
+    transform: translateX(5px);
+}
+
+.abundra-feature-card:hover li::before {
+    color: #E55A2B;
+}
+
+.abundra-vision {
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.abundra-vision blockquote {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 140, 66, 0.05));
+    border-left: 4px solid #FF6B35;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.abundra-vision blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(255, 107, 53, 0.2);
+    font-family: serif;
+}
+
+.abundra-vision blockquote p {
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.abundra-vision blockquote footer {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-style: normal;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .abundra-section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .abundra-section h3 {
+        font-size: 1.6rem;
+    }
+    
+    .abundra-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .abundra-feature-card {
+        padding: 1.5rem;
+    }
+    
+    .abundra-main-link {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+    
+    .abundra-vision blockquote {
+        padding: 1.5rem;
+    }
+    
+    .abundra-vision blockquote p {
+        font-size: 1.1rem;
+    }
+}
